@@ -55,7 +55,7 @@ class BooksApp extends React.Component {
         <div className="list-books">
           <Route
             exact
-            path="react-probooks/search/"
+            path="/react-probooks/search/"
             render={() => (
               <div>
                 <SearchBar
@@ -75,7 +75,7 @@ class BooksApp extends React.Component {
           />
 
           <Route
-            path="react-probooks/search/:urlQuery"
+            path="/react-probooks/search/:urlQuery"
             render={({ match }) => (
               <div>
                 <SearchBar
@@ -97,7 +97,7 @@ class BooksApp extends React.Component {
 
           <Route
             exact
-            path="react-probooks"
+            path="/react-probooks"
             render={() => (
               <div>
                 <div className="list-books-content">
