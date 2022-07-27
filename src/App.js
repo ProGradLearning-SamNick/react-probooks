@@ -15,6 +15,12 @@ class BooksApp extends React.Component {
     searchResults: [],
   };
 
+  //  shelvesLayout = [
+  //   {label: 'currentlyReading', shelfName: 'Currently Reading'},
+  //   {label: 'wantToRead', shelfName: 'Want To Read'},
+  //   {label: 'read', shelfName: 'Read'}
+  // ]
+
   componentDidMount() {
     BooksAPI.update({ id: 'dummy' }, 'none')
       .then((shelvesObject) => this.updateShelf(shelvesObject))
@@ -49,7 +55,7 @@ class BooksApp extends React.Component {
         <div className="list-books">
           <Route
             exact
-            path="/search/"
+            path="react-probooks/search/"
             render={() => (
               <div>
                 <SearchBar
@@ -69,7 +75,7 @@ class BooksApp extends React.Component {
           />
 
           <Route
-            path="/search/:urlQuery"
+            path="react-probooks/search/:urlQuery"
             render={({ match }) => (
               <div>
                 <SearchBar
@@ -91,7 +97,7 @@ class BooksApp extends React.Component {
 
           <Route
             exact
-            path="/"
+            path="react-probooks"
             render={() => (
               <div>
                 <div className="list-books-content">
@@ -111,7 +117,6 @@ class BooksApp extends React.Component {
                     ThisShelf={this.state.read}
                   />
                 </div>
-
                 <div className="open-search">
                   <Link to={`/search/${this.state.query}`}>Add a book</Link>
                 </div>
