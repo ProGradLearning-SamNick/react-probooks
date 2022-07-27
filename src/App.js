@@ -118,7 +118,9 @@ class BooksApp extends React.Component {
                   />
                 </div>
                 <div className="open-search">
-                  <Link to={`/search/${this.state.query}`}>Add a book</Link>
+                  <Link to={`/react-probooks/search/${this.state.query}`}>
+                    Add a book
+                  </Link>
                 </div>
               </div>
             )}
